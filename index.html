@@ -11,84 +11,99 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body class="font-sans bg-primary-light dark:bg-primary-dark">
-    <!-- Sandwich Menu -->
-    <div class="w-screen p-8 fixed z-10 flex flex-col gap-4 bg-section-light text-secondary-light dark:bg-section-dark dark:text-secondary-dark hidden" id="hamburguerMenu">
-        <button class="self-end" id="hamburguerMenuReturnBtn">
-            <i class="fa-solid fa-chevron-right text-3xl"></i>
-        </button>
-        <a href="" class="text-lg">Home</a>
-        <a href="" class="text-lg">Sobre</a>
-        <a href="" class="text-lg">Portfolio</a>
-        <button class="w-fit px-12 py-2 bg-secondary-light text-white/70 dark:bg-secondary-dark dark:text-black text-lg rounded-md">Contato</button>
-        <div class="w-fit mt-8 text-sm flex items-center gap-8">
-            Modo escuro:
-            <button id="toggleLightBtn">
-                <i class="fa-solid fa-toggle-on text-4xl text-secondary-dark"></i>
-            </button>
-            <button class="hidden" id="toggleDarkBtn">
-                <i class="fa-solid fa-toggle-off text-4xl text-secondary-light"></i>
-            </button>
-        </div>
-        <!-- <button class="w-fit flex text-sm items-center gap-8">Pt-BR
-            <i class="fa-solid fa-angle-down dark:text-secondary-dark"></i>
-        </button> -->
-    </div>
 
     <!-- Navbar -->
-    <header class="h-12 px-8 mb-10 flex justify-end items-center bg-black/20">
-        <button id="hamburguerMenuBtn">
+    <header class="h-12 px-8 mb-10 flex justify-end items-center bg-black/20 lg:mb-24">
+        <button id="hamburguerMenuBtn" class="lg:hidden">
             <i class="fa-solid fa-bars text-secondary-light dark:text-secondary-dark text-3xl"></i>
         </button>
+        <nav class="">
+            <ul class="hidden w-full p-8 fixed z-10 top-0 left-0 flex flex-col gap-4 text-secondary-light bg-section-light dark:text-secondary-dark dark:bg-section-dark lg:flex-row lg:flex lg:py-2 lg:px-8 lg:justify-around lg:items-center lg:text-lg" id="hamburguerMenu">
+                <li class="self-end lg:hidden">
+                    <button id="hamburguerMenuReturnBtn">
+                        <i class="fa-solid fa-chevron-right text-3xl"></i>
+                    </button>
+                </li>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Sobre</a>
+                </li>
+                <li>
+                    <a href="">Portfolio</a>
+                </li>
+                <li>
+                    <button class="w-fit px-12 py-2 bg-secondary-light text-white/70 dark:bg-secondary-dark dark:text-black text-lg rounded-md">Contato</button>
+                </li>
+                <li>
+                    <div class="w-fit mt-8 text-sm flex items-center gap-8 lg:mt-0">
+                        Modo escuro:
+                        <button class="toggleLightBtn">
+                            <i class="fa-solid fa-toggle-on text-4xl text-secondary-dark"></i>
+                        </button>
+                        <button class="hidden toggleDarkBtn">
+                            <i class="fa-solid fa-toggle-off text-4xl text-secondary-light"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="px-8 flex flex-col gap-20">
+    <main class="px-8 flex flex-col items-center gap-20">
         <!-- Introduction Section -->
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col justify-center items-center gap-6 lg:flex-row">
             <div class="mb-4 flex flex-col items-center">
-                <img src="./images/IMG-20230613-WA0034-modified.png" alt="" class="w-48">
-                <p class="text-xs dark:text-white/70">Davi, 21 Anos</p>
+                <img src="./images/IMG-20230613-WA0034-modified.png" alt="" class="w-48 lg:w-56">
+                <p class="text-xs lg:text-base dark:text-white/70">Davi, 21 Anos</p>
             </div>
-            <h1 class="text-2xl dark:text-white">Olá, eu sou Desenvolvedor Front End</h1>
-            <p class="text-sm dark:text-white/70">Aqui você encontrará uma coleção de projetos e trabalhos que demonstrem minha paixão e habilidades no mundo da criação de interfaces web envolventes e interativas. Vamos juntos criar experiências online impactantes e memoráveis.</p>
-            <button class="w-fit px-12 py-2 bg-secondary-light text-white/70 dark:bg-secondary-dark dark:text-black text-lg self-end rounded-md">Portfolio
-                <i class="fa-solid fa-caret-right"></i>
-            </button>
+            <div class="max-w-lg flex flex-col gap-6">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dark:text-white">Olá, eu sou Desenvolvedor Front End</h1>
+                <p class="text-sm lg:text-base dark:text-white/70">Aqui você encontrará uma coleção de projetos e trabalhos que demonstrem minha paixão e habilidades no mundo da criação de interfaces web envolventes e interativas. Vamos juntos criar experiências online impactantes e memoráveis.</p>
+                <button class="w-fit px-12 py-2 bg-secondary-light text-white/70 dark:bg-secondary-dark dark:text-black text-lg self-end rounded-md">Portfolio
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
+            </div>
+
         </div>
 
         <!-- Skills Section -->
-        <div class="flex flex-col items-center gap-6 flex-wrap">
+        <div class="p-8 flex flex-col justify-center items-center gap-10">
             <div class="self-start">
-                <h4 class="text-base dark:text-white/70">Serviços</h4>
-                <h2 class="text-xl text-secondary-light dark:text-secondary-dark underline underline-offset-4">Habilidades</h2>
+                <h4 class="text-base lg:text-lg dark:text-white/70">Serviços</h4>
+                <h2 class="text-xl lg:text-2xl text-secondary-light dark:text-secondary-dark underline underline-offset-4">Habilidades</h2>
             </div>
 
-            <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-secondary-light dark:bg-white/10 dark:text-secondary-dark rounded-md">
-                <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
-                <h3>Design Responsivo e Cross-Platform</h3>
-                <p class="text-sm font-extralight">Capacidade de criar interfaces que se adaptem perfeitamente a diferentes dispositivos e tamanhos de tela, garantindo uma experiência de usuário consistente em todos os navegadores e plataformas.</p>
-            </div>
-            <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-secondary-light dark:bg-white/10 dark:text-secondary-dark rounded-md">
-                <i class="fa-solid fa-users text-2xl"></i>
-                <h3>Interação com Usuário</h3>
-                <p class="text-sm font-extralight">Explorar métodos eficazes de capturar leads, como formulários, chamadas à ação (CTAs) e análise de comportamento, visando a converter visitantes em clientes potenciais valiosos para o negócio.</p>
-            </div>
-            <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-secondary-light dark:bg-white/10 dark:text-secondary-dark rounded-md">
-                <i class="fa-brands fa-github text-2xl"></i>
-                <h3>Controle de Versão Git</h3>
-                <p class="text-sm font-extralight">Conhecimento em sistemas de controle de versão, como Git, e familiaridade com plataformas de colaboração, como GitHub, para facilitar o trabalho em equipe, o acompanhamento de alterações e a integração contínua de código.</p>
-            </div>
-            <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-secondary-light dark:bg-white/10 dark:text-secondary-dark rounded-md">
-                <i class="fa-solid fa-globe text-2xl"></i>
-                <h3>Otimização de Desempenho Web</h3>
-                <p class="text-sm font-extralight">Aperfeiçoar o desempenho de sites, otimizando o código, imagens e recursos para carregamento rápido, melhorando a velocidade de navegação e a classificação nos mecanismos de busca.</p>
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-20">
+                <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 rounded-md">
+                    <i class="fa-solid fa-mobile-screen-button text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
+                    <h3 class="text-secondary-light dark:text-secondary-dark lg:text-lg lg:font-semibold">Design Responsivo e Cross-Platform</h3>
+                    <p class="text-sm font-extralight lg:font-normal">Capacidade de criar interfaces que se adaptem perfeitamente a diferentes dispositivos e tamanhos de tela, garantindo uma experiência de usuário consistente em todos os navegadores e plataformas.</p>
+                </div>
+                <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 rounded-md">
+                    <i class="fa-solid fa-users text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
+                    <h3 class="text-secondary-light dark:text-secondary-dark lg:text-lg lg:font-semibold">Interação com Usuário</h3>
+                    <p class="text-sm font-extralight lg:font-normal">Explorar métodos eficazes de capturar leads, como formulários, chamadas à ação (CTAs) e análise de comportamento, visando a converter visitantes em clientes potenciais valiosos para o negócio.</p>
+                </div>
+                <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 rounded-md">
+                    <i class="fa-brands fa-github text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
+                    <h3 class="text-secondary-light dark:text-secondary-dark lg:text-lg lg:font-semibold">Controle de Versão Git</h3>
+                    <p class="text-sm font-extralight lg:font-normal">Conhecimento em sistemas de controle de versão, como Git, e familiaridade com plataformas de colaboração, como GitHub, para facilitar o trabalho em equipe, o acompanhamento de alterações e a integração contínua de código.</p>
+                </div>
+                <div class="h-72 max-w-xs p-4 flex flex-col gap-2 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 rounded-md">
+                    <i class="fa-solid fa-globe text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
+                    <h3 class="text-secondary-light dark:text-secondary-dark lg:text-lg lg:font-semibold">Otimização de Desempenho Web</h3>
+                    <p class="text-sm font-extralight lg:font-normal">Aperfeiçoar o desempenho de sites, otimizando o código, imagens e recursos para carregamento rápido, melhorando a velocidade de navegação e a classificação nos mecanismos de busca.</p>
+                </div>
             </div>
         </div>
 
         <!-- Contact Section -->
-        <div>
-            <h2 class="text-xl font-bold text-secondary-light dark:text-secondary-dark">Entre em Contato</h2>
+        <div class="p-8 flex flex-col gap-6 lg:self-start">
+            <h2 class="text-xl lg:text-2xl font-bold text-secondary-light dark:text-secondary-dark">Entre em Contato</h2>
             <div class="flex flex-col gap-4">
-                <input type="text" class="p-4 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 focus:outline-none" placeholder="Email">
+                <input type="text" class="p-4 lg:w-96 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 focus:outline-none" placeholder="Email">
                 <input type="textarea" class="p-4 bg-black/10 text-black/70 dark:bg-white/10 dark:text-white/70 focus:outline-none" placeholder="Mensagem">
                 <button class="w-fit px-8 py-2 bg-secondary-light text-white/70 dark:bg-secondary-dark dark:text-black text-lg self-end rounded-md">
                     Enviar Mensagem
@@ -99,15 +114,15 @@
     </main>
     
 
-    <footer class="h-12 px-8 mt-10 flex justify-center items-center gap-8 bg-black/20">
+    <footer class="px-8 py-3 mt-10 flex justify-center items-center gap-8 bg-black/20">
         <a href="">
-            <i class="fa-brands fa-instagram text-2xl text-secondary-light dark:text-secondary-dark"></i>
+            <i class="fa-brands fa-instagram text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
         </a>
         <a href="https://github.com/Daavipf">
-            <i class="fa-brands fa-square-github text-2xl text-secondary-light dark:text-secondary-dark"></i>
+            <i class="fa-brands fa-square-github text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
         </a>
         <a href="https://www.linkedin.com/in/davi-pereira-3862a9282/">
-            <i class="fa-brands fa-linkedin text-2xl text-secondary-light dark:text-secondary-dark"></i>
+            <i class="fa-brands fa-linkedin text-2xl lg:text-4xl text-secondary-light dark:text-secondary-dark"></i>
         </a>
     </footer>
     <script src="./src/script.js"></script>

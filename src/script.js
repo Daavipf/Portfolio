@@ -1,5 +1,5 @@
-const toggleDarkBtn = document.querySelector('#toggleDarkBtn')
-const toggleLightBtn = document.querySelector('#toggleLightBtn')
+const toggleDarkBtn = document.querySelector('.toggleDarkBtn')
+const toggleLightBtn = document.querySelector('.toggleLightBtn')
 const hamburguerMenuBtn = document.querySelector('#hamburguerMenuBtn')
 const hamburguerMenuReturnBtn = document.querySelector('#hamburguerMenuReturnBtn')
 
