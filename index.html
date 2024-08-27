@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Davi P. Ferreira">
+  <meta name="keywords" content="Web developer, Front-End, Back-End, frontend, backend, developer, desenvolvedor, programador, freelancer">
+  <meta name="author" content="Davi Pereira Ferreira">
+  <title>Davi Ferreira - Dev Fullstack</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+</head>
+<body>
+  <aside class="sidebar">
+    <button class="tab-button" onclick="openTab('tab1'); clearSidebar()">
+      <svg fill="#fff" width="42px" height="42px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <title>Home</title>
+        <path d="M0 16h4l12-13.696 12 13.696h4l-13.984-16h-4zM4 32h8v-9.984q0-0.832 0.576-1.408t1.44-0.608h4q0.8 0 1.408 0.608t0.576 1.408v9.984h8v-13.408l-12-13.248-12 13.248v13.408zM26.016 6.112l4 4.576v-8.672h-4v4.096z"></path>
+      </svg>
+    </button>
+    <button class="tab-button" onclick="openTab('tab2')">
+      <svg width="42px" height="42px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Sobre mim</title>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="about-white" fill="#fff" transform="translate(42.666667, 42.666667)">
+              <path d="M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51168 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.154987,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51168 331.154987,3.55271368e-14 213.333333,3.55271368e-14 Z M213.333333,384 C119.227947,384 42.6666667,307.43872 42.6666667,213.333333 C42.6666667,119.227947 119.227947,42.6666667 213.333333,42.6666667 C307.44,42.6666667 384,119.227947 384,213.333333 C384,307.43872 307.44,384 213.333333,384 Z M240.04672,128 C240.04672,143.46752 228.785067,154.666667 213.55008,154.666667 C197.698773,154.666667 186.713387,143.46752 186.713387,127.704107 C186.713387,112.5536 197.99616,101.333333 213.55008,101.333333 C228.785067,101.333333 240.04672,112.5536 240.04672,128 Z M192.04672,192 L234.713387,192 L234.713387,320 L192.04672,320 L192.04672,192 Z" id="Shape">
+              </path>
+            </g>
+          </g>
+      </svg>
+    </button>
+    <button class="tab-button" onclick="openTab('tab3')">
+      <svg fill="#fff" width="42px" height="42px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Portfolio</title>
+        <rect x="0" fill="none" width="20" height="20"/>
+        <g>
+          <path d="M4 5H.78c-.37 0-.74.32-.69.84l1.56 9.99S3.5 8.47 3.86 6.7c.11-.53.61-.7.98-.7H10s-.7-2.08-.77-2.31C9.11 3.25 8.89 3 8.45 3H5.14c-.36 0-.7.23-.8.64C4.25 4.04 4 5 4 5zm4.88 0h-4s.42-1 .87-1h2.13c.48 0 1 1 1 1zM2.67 16.25c-.31.47-.76.75-1.26.75h15.73c.54 0 .92-.31 1.03-.83.44-2.19 1.68-8.44 1.68-8.44.07-.5-.3-.73-.62-.73H16V5.53c0-.16-.26-.53-.66-.53h-3.76c-.52 0-.87.58-.87.58L10 7H5.59c-.32 0-.63.19-.69.5 0 0-1.59 6.7-1.72 7.33-.07.37-.22.99-.51 1.42zM15.38 7H11s.58-1 1.13-1h2.29c.71 0 .96 1 .96 1z"/>
+        </g>
+      </svg>
+    </button>
+    <button class="tab-button" onclick="openTab('tab4')">
+      <svg width="42px" height="42px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <title>Contato</title>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" fill="#fff"/>
+      </svg>
+    </button>
+  </aside>
+  <main class="content">
+    <div id="tab1" class="tab-home">
+      <img src="./profile.webp">
+      <h1>Olá, eu sou desenvolvedor freelancer</h1>
+      <p>Há mais <strong>de um ano</strong> com experiência em projetos trabalhando no frontend e backend</p>
+    </div>
+    <div id="tab2" class="tab">
+      <div class="tab-about">
+        <div>
+          <h2>Sobre mim</h2>
+          <p>Olá! Eu sou Davi, Sou desenvolvedor web fullstack com ampla experiência na criação de soluções digitais personalizadas. Com um profundo conhecimento em tecnologias front-end como HTML, CSS, JavaScript e React, além de domínio em back-end com Node.js, Express, e MongoDB, entrego projetos que unem design intuitivo e desempenho robusto. Minha abordagem focada em resultados garante que cada aplicação seja não apenas funcional, mas também visualmente atraente e fácil de usar. Estou sempre em busca de novos desafios para transformar ideias em realidade através de código eficiente e criativo.</p>
+        </div>
+        <div>
+          <h2>Habilidades</h2>
+          <div class="skills">
+            <div class="dev-card">
+              <div>
+                <i class="devicon-html5-plain"></i>
+                <i class="devicon-css3-plain"></i>
+              </div>
+              <h3>HTML e CSS</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-javascript-plain"></i>
+              <h3>Javascript</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-mongodb-plain"></i>
+              <h3>MongoDB</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-express-original"></i>
+              <h3>Express</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-react-original"></i>
+              <h3>React</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-nodejs-plain-wordmark"></i>
+              <h3>Node.js</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-tailwindcss-original"></i>
+              <h3>TailwindCSS</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-jquery-plain"></i>
+              <h3>JQuery</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-mongoose-original"></i>
+              <h3>Mongoosejs</h3>
+            </div>
+            <div class="dev-card">
+              <i class="devicon-wordpress-plain"></i>
+              <h3>Wordpress</h3>
+            </div>
+            <div class="dev-card">
+              <svg fill="#fff" width="48px" height="48px" viewBox="0 0 14 14" role="img" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 12.4,1 1.6,1 C 1.2678571,1 1,1.26786 1,1.6 L 1,12.4 C 1,12.73214 1.2678571,13 1.6,13 l 10.8,0 C 12.732143,13 13,12.73214 13,12.4 L 13,1.6 C 13,1.26786 12.732143,1 12.4,1 m -6.9991071,8.66518 -1.0660715,0 0,-5.33036 1.0660715,0 0,5.33036 z m 4.2669642,0 -3.2008928,0 0,-1.06607 3.2008928,0 0,1.06607 z m 0,-2.13214 -3.2008928,0 0,-1.06608 3.2008928,0 0,1.06608 z m 0,-2.13483 -3.2008928,0 0,-1.06607 3.2008928,0 0,1.06607 z"></path></g></svg>
+              <h3>Elementor Pro</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tab3" class="tab">
+      <div class="tabs-container">
+        <div class="tabs-buttons">
+          <button class="tabs-button active" data-tab="tab-1">Aplicações Fullstack</button>
+          <button class="tabs-button" data-tab="tab-2">Componentes Web</button>
+          <button class="tabs-button" data-tab="tab-3">Páginas</button>
+        </div>
+
+        <div class="tabs-content active" id="tab-1">
+          <h2>Trabalhando nisto...</h2>
+        </div>
+
+        <div class="tabs-content" id="tab-2">
+          <h2>Trabalhando nisto...</h2>
+        </div>
+
+        <div class="tabs-content" id="tab-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="https://davipfdev.online/wp-content/uploads/2024/02/Jreal-scaled.jpg" alt="Imagem de exemplo">
+            </div>
+            <div class="button-container">
+              <button class="button">Clique aqui</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tab4" class="tab">
+        <img src="./Website Creator-rafiki.svg">
+        <h2>Vamos trabalhar juntos no seu próximo projeto!</h2>
+        <div class="contact">
+          <a href="https://wa.link/styixi" target="_blank">
+            <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" fill="#fff"/>
+            </svg>
+          </a>
+          <a href="https://discord.gg/EVzpKHjn7f" target="_blank">
+            <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8944 4.34399C17.5184 3.71467 16.057 3.256 14.5317 3C14.3397 3.33067 14.1263 3.77866 13.977 4.13067C12.3546 3.89599 10.7439 3.89599 9.14394 4.13067C8.9946 3.77866 8.77059 3.33067 8.58925 3C7.05328 3.256 5.59194 3.71467 4.22555 4.34399C1.46289 8.41865 0.716219 12.3973 1.08955 16.3226C2.92421 17.6559 4.6949 18.4666 6.43463 19C6.86129 18.424 7.2453 17.8053 7.57597 17.1546C6.94663 16.92 6.3493 16.632 5.7733 16.2906C5.92263 16.184 6.07197 16.0667 6.21064 15.9493C9.68796 17.5387 13.4544 17.5387 16.889 15.9493C17.0383 16.0667 17.177 16.184 17.3263 16.2906C16.7503 16.632 16.153 16.92 15.5237 17.1546C15.8543 17.8053 16.2384 18.424 16.665 19C18.4037 18.4666 20.185 17.6559 22.0101 16.3226C22.4687 11.7787 21.2837 7.83202 18.8944 4.34399ZM8.05596 13.9013C7.01061 13.9013 6.15728 12.952 6.15728 11.7893C6.15728 10.6267 6.98928 9.67731 8.05596 9.67731C9.11194 9.67731 9.97591 10.6267 9.95457 11.7893C9.95457 12.952 9.11194 13.9013 8.05596 13.9013ZM15.065 13.9013C14.0197 13.9013 13.1653 12.952 13.1653 11.7893C13.1653 10.6267 13.9983 9.67731 15.065 9.67731C16.121 9.67731 16.985 10.6267 16.9637 11.7893C16.9637 12.952 16.1317 13.9013 15.065 13.9013Z" fill="#fff"></path> </g></svg>
+          </a>
+          <a href="https://msng.link/o?davipfdev=tg" target="_blank">
+            <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"></path></g></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/davi-pereira-3862a9282/" target="_blank">
+            <svg viewBox="0 0 24 24" fill="fff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z" fill="#fff"></path> </g></svg>
+          </a>
+        </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

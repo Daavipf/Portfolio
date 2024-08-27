@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  font-family: "Wix Madefor Display", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("./bg.webp");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  width: 10%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  //position: fixed;
+  height: 100%;
+  transition: background-color 1s;
+}
+
+.sidebar.active{
+  background-color: #1a1a1a;
+}
+
+.sidebar button {
+  background-color: #4440;
+  color: white;
+  border: none;
+  //padding: 15px 20px;
+  //margin: 5px 0;
+  //width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar button:hover {
+  //background-color: #555;
+}
+
+.content {
+  //margin-left: 14%;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-about{
+  width: 50%;
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dev-card{
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dev-card i{
+  font-size: 48px;
+}
+
+.tab-home img{
+  width: 350px;
+  height: 350px;
+}
+
+.tab-home h1{
+  font-size: 3rem;
+}
+
+.tab-home p{
+  font-size: 1.2rem;
+}
+
+.tab {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-timing-function: cubic-bezier(.5, -.005, .2, 1);
+  transition: left 1s;
+}
+
+.tab.active {
+  left: 0;
+}
+
+.tab#tab2 {
+  background-image: url("./bg2-3.webp");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.tab#tab3 {
+  background-image: url("./bg3-2.webp");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.tab#tab4 {
+  //background-image: url("./bg4.webp");
+  background-color: #224;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+#tab4 img{
+  width: 350px;
+}
+
+.contact{
+  display: flex;
+  gap: 24px;
+}
+
+.contact a{
+  width: 80px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  transition: transform 3.5s ease;
+}
+
+.button-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #3498db;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.tabs-container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.tabs-buttons {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #aac5;
+}
+
+.tabs-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: border .8s;
+}
+
+.tabs-button:hover {
+  border-bottom: 2px solid #aac;
+}
+
+.tabs-button.active {
+  //background-color: #fff;
+  border-bottom: 2px solid #aac;
+}
+
+.tabs-content {
+  display: none;
+  padding: 20px;
+  //background-color: #fff;
+  //border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabs-content.active {
+  display: block;
+}
