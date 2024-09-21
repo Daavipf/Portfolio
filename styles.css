@@ -28,7 +28,7 @@ body {
   align-items: center;
   gap: 24px;
   padding: 20px;
-  //position: fixed;
+  /*position: fixed;*/
   height: 100%;
   transition: background-color 1s;
 }
@@ -41,20 +41,25 @@ body {
   background-color: #4440;
   color: white;
   border: none;
-  //padding: 15px 20px;
+  /*//padding: 15px 20px;
   //margin: 5px 0;
-  //width: 100%;
+  //width: 100%;*/
   text-align: left;
   cursor: pointer;
-  font-size: 18px;
 }
 
-.sidebar button:hover {
-  //background-color: #555;
+.sidebar button svg {
+  width: 42px;
+}
+
+@media screen and (max-width:600px){
+  .sidebar button svg{
+    width: 32px;
+  }
 }
 
 .content {
-  //margin-left: 14%;
+  /*//margin-left: 14%;*/
   width: 90%;
   height: 100%;
   position: relative;
@@ -72,26 +77,33 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width:600px) {
+  .tab-home img {
+    width: 240px !important;
+    height: 240px !important;
+  }
+  
+  .tab-home h1{
+    font-size: 28px !important;
+    text-align: center;
+  }
+
+  .tab-home p {
+    text-align: center;
+    font-size: 16px !important;
+  }
+}
+
 .tab-about{
   width: 50%;
 }
 
-.skills{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.dev-card{
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.dev-card i{
-  font-size: 48px;
+@media screen and (max-width:600px) {
+  .tab-about {
+    width: 85%;
+    height: fit-content;
+    overflow-y: auto;
+  }
 }
 
 .tab-home img{
@@ -139,7 +151,7 @@ body {
 }
 
 .tab#tab4 {
-  //background-image: url("./bg4.webp");
+  /*//background-image: url("./bg4.webp");*/
   background-color: #224;
   background-size: auto;
   background-repeat: no-repeat;
@@ -158,9 +170,28 @@ body {
   width: 80px;
 }
 
+@media screen and (max-width:600px) {
+  .tab#tab4{
+    
+  }
+  
+  #tab4 img {
+    width: 240px;
+  }
+
+  #tab4 h2 {
+    text-align: center;
+    font-size: 20px !important;
+  }
+
+  .contact a {
+    width: 42px;
+  }
+}
+
 .card {
-  width: 300px;
-  height: 400px;
+  width: 20vw;
+  height: 30vh;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -168,9 +199,15 @@ body {
   flex-direction: column;
 }
 
+@media screen and (max-width:600px) {
+  .card {
+    height: 23vh;
+  }
+}
+
 .thumbnail {
   width: 100%;
-  height: 300px;
+  height: 20vh;
   overflow: hidden;
   position: relative;
 }
@@ -231,18 +268,79 @@ body {
 }
 
 .tabs-button.active {
-  //background-color: #fff;
+  /*//background-color: #fff;*/
   border-bottom: 2px solid #aac;
 }
 
 .tabs-content {
   display: none;
   padding: 20px;
-  //background-color: #fff;
-  //border: 1px solid #ccc;
+  /*//background-color: #fff;
+  //border: 1px solid #ccc;*/
   border-top: none;
 }
 
 .tabs-content.active {
   display: block;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  /*background-color: #fff;*/
+  padding: 15px;
+  border-radius: 10px;
+  /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.skill-info {
+  width: 100%;
+}
+
+.skill-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.skill-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-progress {
+  width: 100%;
+  background-color: #252242;
+  border-radius: 10px;
+  position: relative;
+  height: 12px;
+  overflow: hidden;
+}
+
+.skill-progress .progress-bar {
+  height: 100%;
+  background-color: #4d9e4f;
+  border-radius: 10px;
+}
+
+.progress-percentage {
+  font-size: 12px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
 }
